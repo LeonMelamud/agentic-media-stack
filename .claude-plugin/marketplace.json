@@ -1,0 +1,13 @@
+{
+  "name": "media-stack",
+  "owner": {
+    "name": "Leon Melamud"
+  },
+  "plugins": [
+    {
+      "name": "agentic-media-stack",
+      "source": "./plugin-src",
+      "description": "Router and installer for the open-source agentic media stack, with a guided beginner mode."
+    }
+  ]
+}

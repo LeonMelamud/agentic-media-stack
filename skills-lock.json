@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "video-to-landing-page": {
+      "source": "hoodini/ai-agents-skills",
+      "sourceType": "github",
+      "skillPath": "skills/video-to-landing-page/SKILL.md",
+      "computedHash": "f17ee0a1fc06945b56bb0705f7559d8c254480cbba7c24c6fa309f46049bb27e"
+    }
+  }
+}

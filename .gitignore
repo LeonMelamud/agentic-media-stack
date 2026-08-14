@@ -1,0 +1,10 @@
+.DS_Store
+.playwright-mcp/
+media-stack-handoff.zip
+HANDOFF.md
+posts.md
+ai-stack-extraction.md
+glossary-and-harness.md
+unusual-automation.md
+agentic-media-stack.plugin
+.claude/
