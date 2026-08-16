@@ -40,6 +40,7 @@ video-use and HyperFrames are **layers, not competitors**. video-use makes edito
 | An existing Remotion project | `/remotion-to-hyperframes` | One-way port |
 | Generate, upscale, or retouch an image; AI-generated video, voice, or music | `magnific` MCP (bundled) | Hosted models, sign in on first use. Generations spend account credits — ask before spending. Clips with generated speech: read `generated-video-qa` BEFORE writing prompts and validate every clip with it |
 | An image that must contain a real, specific person from a supplied photo — poster, banner, promo key visual | `reference-photo-image-rules` | Read it BEFORE the first generation. Likeness and layout failures come from the reference photo, not the prompt, and each round spends credits |
+| Generate video with a hosted model — animate an image, pick between Seedance / FLUX 3 / Veo / Kling, direct smooth motion | `hosted-video-generation` | Read it BEFORE the first render. A video costs 1-2 orders of magnitude more than an image, so there is no cheap retry |
 | A website that is not video-driven | See `references/web-and-content.md` | Outside the core — design-quality layer + Netlify deploy |
 | An automated content pipeline (RSS trigger, auto-publish) | See `references/web-and-content.md` | Publish guardrail applies with full force |
 | Anything else | `/general-video` | Length- and input-agnostic fallback |
@@ -93,6 +94,7 @@ Carry these into every production regardless of ecosystem:
 
 - **Truth contract.** Every word on screen must be verifiable against the real transcript or source. No invented statistics, no "link in bio" unless a link was promised, no placeholder figures presented as real.
 - **Ask before publishing.** Deploying, uploading, or posting to any platform requires explicit user approval first.
+- **One expensive render at a time.** Never queue two variants of a hosted video to compare — that is thousands of credits spent before any feedback. Generate one, show it, iterate on direction. Image variants are the exception; batching those for review is correct. Price with `simulate_cost` and check `account_balance` before spending, and state the cost when asking to proceed. See `hosted-video-generation`.
 - **Never overwrite.** Write `final_*_V<N>.mp4`. Renders are expensive and users compare versions.
 - **Self-evaluate before showing.** Inspect the rendered output at cut boundaries for visual jumps, audio pops, and hidden captions. Fix and re-render, up to three attempts, before presenting a preview. For AI-generated speech, that inspection is mechanical: transcribe locally and diff against the script — see the `generated-video-qa` skill.
 - **Audio normalization.** Two-pass loudnorm to -14 LUFS / -1 dBTP / LRA 11. This is the platform standard; skipping it means the platform normalizes worse.
