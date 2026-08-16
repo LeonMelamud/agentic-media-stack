@@ -39,6 +39,7 @@ video-use and HyperFrames are **layers, not competitors**. video-use makes edito
 | A landing page driven by video | See landing page section below | Three different mechanics |
 | An existing Remotion project | `/remotion-to-hyperframes` | One-way port |
 | Generate, upscale, or retouch an image; AI-generated video, voice, or music | `magnific` MCP (bundled) | Hosted models, sign in on first use. Generations spend account credits — ask before spending. Clips with generated speech: read `generated-video-qa` BEFORE writing prompts and validate every clip with it |
+| An image that must contain a real, specific person from a supplied photo — poster, banner, promo key visual | `reference-photo-image-rules` | Read it BEFORE the first generation. Likeness and layout failures come from the reference photo, not the prompt, and each round spends credits |
 | A website that is not video-driven | See `references/web-and-content.md` | Outside the core — design-quality layer + Netlify deploy |
 | An automated content pipeline (RSS trigger, auto-publish) | See `references/web-and-content.md` | Publish guardrail applies with full force |
 | Anything else | `/general-video` | Length- and input-agnostic fallback |
@@ -68,6 +69,7 @@ Scroll budget is computed, not guessed: roughly 26px per frame, clamped to [2500
 1. **Confirm the brief.** State back what will be produced, how long, what aspect ratio, and what the output file will be. Wait for approval. Never start a render off an ambiguous request.
 2. **Check for a `frame.md`.** If the project has one, use it. If not and the user cares about brand consistency, offer to create one before the first render — see `references/pipelines.md`.
 3. **If the content is Hebrew or any RTL language**, read the `hebrew-media-rules` skill first. RTL failures surface at render, not at author time.
+4. **If a real person from a photo must appear in generated output**, read `reference-photo-image-rules` first. Prepare the reference before writing the prompt — re-wording after a failed render almost never fixes it.
 
 ## Composite pipelines
 
