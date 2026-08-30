@@ -53,7 +53,7 @@ shots, dead air gets filled with invented gibberish speech. The
 | **ai-agents-skills** | `hoodini/ai-agents-skills` | Landing pages from video, viral shorts, decks, Hebrew tooling |
 
 Plus bundled MCP servers (image/video/voice/music generation, browser control,
-scraping, deploys) — see [`plugin-src/README.md`](plugin-src/README.md) for the
+scraping, deploys) — see [`PLUGIN.md`](PLUGIN.md) for the
 full documentation, prerequisites, and design notes.
 
 **This plugin holds no copies of upstream skills.** It installs them from source;

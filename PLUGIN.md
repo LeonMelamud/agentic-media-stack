@@ -50,8 +50,10 @@ The setup skill checks prerequisites (Node 22+, FFmpeg — offers to install wha
 asks which parts you need, and installs everything from upstream: the three media ecosystems
 plus an optional design-and-copy pack for website work. One plugin, one conversation, full stack.
 
-To share: this plugin ships inside a folder with a `.claude-plugin/marketplace.json` — push
-that folder to GitHub and anyone installs it with `claude plugin marketplace add <you>/<repo>`.
+The repository root is the plugin: `.claude-plugin/plugin.json` sits beside
+`.claude-plugin/marketplace.json`, so the same repo works three ways — `claude plugin
+marketplace add <you>/<repo>` on the CLI, a direct clone, and a GitHub "Download ZIP"
+uploaded in Claude Desktop under Settings → Plugins → Upload plugin.
 
 ### Prerequisites
 

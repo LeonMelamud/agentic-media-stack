@@ -1,12 +1,13 @@
 {
   "name": "media-stack",
+  "description": "Media production skills for Claude: video, landing pages, decks and motion graphics, with mechanical self-checks before anything is shown.",
   "owner": {
     "name": "Leon Melamud"
   },
   "plugins": [
     {
       "name": "agentic-media-stack",
-      "source": "./plugin-src",
+      "source": "./",
       "description": "Router and installer for the open-source agentic media stack, with a guided beginner mode."
     }
   ]
