@@ -6,7 +6,9 @@ A Claude Code plugin that turns your coding agent into a media production studio
 video, landing pages, decks, and motion graphics, with the agent doing the work
 and **checking its own work** before showing you anything.
 
-## Install — two commands
+## Install
+
+**Claude Code — two commands:**
 
 ```bash
 claude plugin marketplace add LeonMelamud/agentic-media-stack
@@ -16,6 +18,11 @@ claude plugin install agentic-media-stack@media-stack
 Then start `claude` and say:
 
 > set up the media stack
+
+**Claude Desktop (Cowork) — no terminal:** download
+[the repository ZIP](https://github.com/LeonMelamud/agentic-media-stack/archive/refs/heads/main.zip),
+then Settings → Cowork → Plugins → **Upload plugin** and drop the `.zip` in
+without unpacking it. Hebrew walkthrough: **[INSTALL-he.md](INSTALL-he.md) — מדריך התקנה בעברית**.
 
 New to all this? Just say **"I want to make a video"** — the guided beginner mode
 takes over, asks one question at a time, and defaults to free, local tools.

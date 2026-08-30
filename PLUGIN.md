@@ -42,6 +42,10 @@ claude plugin marketplace add LeonMelamud/agentic-media-stack
 claude plugin install agentic-media-stack@media-stack
 ```
 
+No terminal? In Claude Desktop, download the repository ZIP from GitHub and upload it
+under Settings → Cowork → Plugins → Upload plugin. Step-by-step in Hebrew:
+[INSTALL-he.md](INSTALL-he.md).
+
 Then start `claude` and say:
 
 > set up the media stack
