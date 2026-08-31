@@ -19,10 +19,15 @@ Then start `claude` and say:
 
 > set up the media stack
 
-**Claude Desktop (Cowork) — no terminal:** download
-[the repository ZIP](https://github.com/LeonMelamud/agentic-media-stack/archive/refs/heads/main.zip),
-then Settings → Cowork → Plugins → **Upload plugin** and drop the `.zip` in
-without unpacking it. Hebrew walkthrough: **[INSTALL-he.md](INSTALL-he.md) — מדריך התקנה בעברית**.
+**Using Claude Cowork or Claude Desktop instead?** Install the Cowork edition:
+**[agentic-media-stack-cowork](https://github.com/LeonMelamud/agentic-media-stack-cowork)** —
+same domain knowledge, rewritten for hosted generation with no terminal, no ffmpeg and nothing
+to install. The skills in *this* repo drive local tools (`npx`, `ffmpeg`, Whisper, git), so in
+Cowork their first instruction is one you cannot follow.
+
+This repo's ZIP still uploads in Desktop (Settings → Cowork → Plugins → **Upload plugin**,
+`.zip` unpacked — Hebrew walkthrough: [INSTALL-he.md](INSTALL-he.md)) if you deliberately want
+the CLI-shaped skills there.
 
 New to all this? Just say **"I want to make a video"** — the guided beginner mode
 takes over, asks one question at a time, and defaults to free, local tools.
