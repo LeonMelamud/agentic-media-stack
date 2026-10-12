@@ -34,6 +34,8 @@ video-use and HyperFrames are **layers, not competitors**. video-use makes edito
 | A transparent overlay — lower-third, logo sting, animated quote | `/motion-graphics` | Outputs MP4 **or** alpha-channel overlay |
 | An existing podcast to package with graphics | `/talking-head-recut` | Footage untouched, graphics added |
 | Captions on an existing talking head | `/embedded-captions` | See the Hebrew rules skill first if the audio is Hebrew |
+| Finished footage as platform versions — Reel/Story, a 4:5 cut for the LinkedIn or Facebook feed, X, Shorts, TikTok; a new ratio, a crop or a zoomed-out card; burned or karaoke captions; a hook and closing line; an opening where the camera jumps between screens | `reproducible-cinematic-video` (Mode B) | No cuts and no retiming: the source keeps its timing and sound. One 9:16 master plus a 4:5 sibling from one caption file. Its platform table says which file goes where |
+| An approved Three.js / 3D film whose shots should become photoreal with fal, keeping camera, cuts and soundtrack | `reproducible-cinematic-video` (Mode A) | Shot-by-shot, inside the original intervals |
 | A presentation or pitch deck | `/slideshow` | Navigable deck with branching and presenter mode, not a rendered video |
 | A short-form vertical clip | `yuv-viral-video` | Always emits 9:16 **and** 16:9 |
 | A landing page driven by video | See landing page section below | Three different mechanics |
@@ -97,4 +99,4 @@ Carry these into every production regardless of ecosystem:
 - **One expensive render at a time.** Never queue two variants of a hosted video to compare — that is thousands of credits spent before any feedback. Generate one, show it, iterate on direction. Image variants are the exception; batching those for review is correct. Price with `simulate_cost` and check `account_balance` before spending, and state the cost when asking to proceed. See `hosted-video-generation`.
 - **Never overwrite.** Write `final_*_V<N>.mp4`. Renders are expensive and users compare versions.
 - **Self-evaluate before showing.** Inspect the rendered output at cut boundaries for visual jumps, audio pops, and hidden captions. Fix and re-render, up to three attempts, before presenting a preview. For AI-generated speech, that inspection is mechanical: transcribe locally and diff against the script — see the `generated-video-qa` skill.
-- **Audio normalization.** Two-pass loudnorm to -14 LUFS / -1 dBTP / LRA 11. This is the platform standard; skipping it means the platform normalizes worse.
+- **Audio normalization.** Two-pass loudnorm to -14 LUFS / -1 dBTP / LRA 11. This is the platform standard; skipping it means the platform normalizes worse. The exception is re-delivering approved footage (`reproducible-cinematic-video`): there the source audio is the authority and is copied. Normalize only when the user asks or the source is badly quiet.

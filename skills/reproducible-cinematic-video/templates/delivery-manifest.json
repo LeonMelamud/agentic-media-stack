@@ -1,0 +1,24 @@
+{
+  "name": "my-clip-reel-he",
+  "source": "../approved/source.mp4",
+  "output_dir": "../delivery",
+  "review_dir": "review",
+  "preset": "ig-reels",
+  "reframe": {
+    "fit": "crop",
+    "anchor_x": "left",
+    "anchor_y": "top",
+    "zoom": 1.25,
+    "keyframes": []
+  },
+  "captions": {
+    "cues": "cues.json",
+    "weight": 800,
+    "y_center": 0.66,
+    "max_lines": 2,
+    "box": true
+  },
+  "audio": {"mode": "copy"},
+  "video": {"crf": 18, "preset": "slow", "maxrate": "12M", "bufsize": "24M", "sharpen": 0},
+  "cover_time": 12.6
+}

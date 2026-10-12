@@ -1,0 +1,13 @@
+{
+  "endpoint": "vendor/model/endpoint",
+  "request_id": "REQUEST_ID",
+  "status_url": "STATUS_URL",
+  "phase": "image",
+  "shot": 1,
+  "input_manifest": "work/requests/shot-001-input.json",
+  "submitted_at": "2026-01-01T00:00:00Z",
+  "state": "submitted",
+  "result_url": null,
+  "local_result": null,
+  "error": null
+}

@@ -30,11 +30,23 @@ Required sequence:
 
 Step 3 is not optional for Hebrew. Burned captions cannot be fixed after the render.
 
+Local Whisper notes, verified on Hebrew talks:
+
+- **Model:** `ivrit-ai/whisper-large-v3-turbo-ct2` (faster-whisper) clearly beats stock `large-v3` / turbo on Hebrew speech. Stock models forced to `he` can loop on English audio.
+- **English inside Hebrew** (slides read aloud, a promo playing in the room): a single forced-language pass turns it into confident-looking garbage.
+  - Detect the language per segment with a general multilingual model. A Hebrew fine-tune reports Hebrew at p=1.0 for everything, so never use it for language ID.
+  - Re-transcribe the foreign spans in their own language. `reproducible-cinematic-video` → `scripts/transcribe.py` does this, with `--span` for a switch inside one segment.
+- **Laughter and applause:** ASR inserts a short filler word at the end of a phrase where the room laughs ("זה."). Flag cue-final short words in the approval step. The user may prefer an emoji in its place.
+
 ## Text rendering in ffmpeg
 
 Hebrew inside ffmpeg filter layers requires bidirectional reordering. Without it, text renders reversed or with punctuation on the wrong side.
 
 Use `python-bidi` to reorder strings before passing them to `drawtext` or ASS subtitle files. Verify a rendered still frame before committing to a full render — a single frame costs seconds, a full render costs minutes.
+
+Reorder only for a renderer that has no bidi of its own. Some renderers already reorder and shape: Pillow with RAQM (`features.check('raqm')`), browsers (HyperFrames compositions), and libass/drawtext builds with FriBidi. Given a pre-reordered string, they reverse it a second time. With Pillow, draw the logical string with `direction="rtl", language="he"`.
+
+Static ffmpeg builds often have no `drawtext` or `subtitles` filter at all. Then render each caption as a PNG with Pillow RAQM and overlay it; `reproducible-cinematic-video` does this.
 
 Mixed Hebrew and English in one line is the most common failure. Test that case explicitly.
 
@@ -47,6 +59,8 @@ Do not fall back to a default sans-serif. Hebrew has poor coverage in most Latin
 | Body and UI | Rubik, Assistant |
 | Display and headlines | Suez One |
 | Heavy display in video | Rubik Black |
+
+Also verified in rendered Reels, both OFL variable fonts: **Heebo** ExtraBold (800) for captions and **Frank Ruhl Libre** Black (900) for a serif title or closing line.
 
 Confirm the font file actually contains Hebrew glyphs before rendering. Headless Chrome silently substitutes a fallback and produces tofu boxes or Latin-shaped Hebrew.
 
@@ -68,6 +82,11 @@ Numbers, code, and Latin brand names stay LTR inside RTL text. Do not mirror the
 
 - Captions align right by default in Hebrew
 - Karaoke-style caption scaling uses ASS override tags; verify the reordered string survives the tag insertion
+- HTML karaoke (HyperFrames):
+  - Use one span per word inside a `dir="rtl"` line, with no reordering.
+  - Balance line breaks by measuring each word with the real font (Pillow RAQM) instead of relying on flex-wrap, which leaves orphans.
+  - Keep the word gap at least 0.34em, so a lifted highlighted word does not touch its neighbours.
+- Centered caption pills are the norm for social video. Right alignment applies to left-anchored caption blocks.
 - Never cover the speaker's face with a caption card — this holds in every language, and Hebrew cards run wider for the same word count, so the risk is higher
 
 ## Verification before declaring done

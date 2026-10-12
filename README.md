@@ -55,6 +55,9 @@ shots, dead air gets filled with invented gibberish speech. The
 | `media-stack-setup` | Installs the three upstream ecosystems, checks prerequisites first |
 | `generated-video-qa` | Transcribe-and-diff validation for AI-generated talking-character video |
 | `hebrew-media-rules` | Hebrew/RTL production: transcription correction, bidi text, mirrored layout |
+| `reference-photo-image-rules` | Putting a real person from a photo into a generated image without likeness or layout drift |
+| `hosted-video-generation` | Hosted video models: which model, cost discipline, smooth motion |
+| `reproducible-cinematic-video` | Finished footage into platform versions (Reels, 4:5 for LinkedIn/Facebook, X): zoom-out framing, karaoke Hebrew captions, hook and closing line, a steady opening, delivery checks |
 
 ## What it routes to
 

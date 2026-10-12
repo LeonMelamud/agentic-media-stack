@@ -1,0 +1,135 @@
+{
+  "title": "Claude Cowork Reel",
+  "language": "he",
+  "captions": "prep/captions.json",
+  "media": {
+    "base": "assets/source-steady.mp4",
+    "bg": "assets/bg-steady.mp4",
+    "hold": "assets/hold.png",
+    "bg_hold": "assets/bg-hold.png"
+  },
+  "fonts": {
+    "sans": "assets/fonts/Heebo-VF.ttf",
+    "serif": "assets/fonts/FrankRuhlLibre-VF.ttf"
+  },
+  "video_duration": 34.5,
+  "hold": 1.5,
+  "brand_words": [
+    "קלוד",
+    "בקלוד",
+    "Claude"
+  ],
+  "hook": {
+    "start": 0.2,
+    "duration": 3.6,
+    "lines": [
+      "כל המצגת הזאת",
+      "נעשתה עם *Claude*"
+    ]
+  },
+  "chip": {
+    "start": 3.7,
+    "label": "סדנת מנהלים",
+    "brand": "CLAUDE COWORK"
+  },
+  "cta": {
+    "start": 32.4,
+    "lines": [
+      "רוצים לדעת איך",
+      "עשיתי את הסרטון?"
+    ],
+    "dim_exposure": -0.45
+  },
+  "cam_origin": "9% 14%",
+  "punch_ins": [
+    {
+      "t": 18.94,
+      "scale": 1.1,
+      "dur": 0.32,
+      "ease": "power3.out",
+      "note": "\"זה משהו מטורף\""
+    },
+    {
+      "t": 20.05,
+      "scale": 1.06,
+      "dur": 0.45,
+      "ease": "power2.inOut"
+    },
+    {
+      "t": 20.5,
+      "scale": 1.12,
+      "dur": 2.3,
+      "ease": "sine.inOut",
+      "note": "\"כל המצגת הזאת נעשתה בעזרת קלוד\""
+    },
+    {
+      "t": 22.9,
+      "scale": 1,
+      "dur": 0.7,
+      "ease": "power2.inOut"
+    },
+    {
+      "t": 28.5,
+      "origin": "60% 20%"
+    },
+    {
+      "t": 30.3,
+      "scale": 1.1,
+      "dur": 1.8,
+      "ease": "sine.inOut",
+      "note": "\"את התמונה הזאתי\""
+    },
+    {
+      "t": 32.15,
+      "scale": 1,
+      "dur": 0.7,
+      "ease": "power2.inOut"
+    }
+  ],
+  "base_exposure": 0.04,
+  "grades": {
+    "#base": {
+      "preset": "skin-soft",
+      "intensity": 0.6,
+      "adjust": {
+        "contrast": 0.08
+      }
+    },
+    "#base-hold": {
+      "preset": "skin-soft",
+      "intensity": 0.6,
+      "adjust": {
+        "contrast": 0.08,
+        "exposure": -0.45
+      }
+    },
+    "#bg": {
+      "preset": "skin-soft",
+      "intensity": 0.6,
+      "adjust": {
+        "exposure": -1.05,
+        "saturation": -0.3
+      },
+      "effects": {
+        "blur": 1
+      }
+    },
+    "#bg-hold": {
+      "preset": "skin-soft",
+      "intensity": 0.6,
+      "adjust": {
+        "exposure": -1.05,
+        "saturation": -0.3
+      },
+      "effects": {
+        "blur": 1
+      }
+    }
+  },
+  "layouts": {
+    "reel": {},
+    "feed-4x5": {
+      "out": "../my-reel-4x5"
+    }
+  }
+}

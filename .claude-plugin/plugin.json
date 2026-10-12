@@ -1,7 +1,7 @@
 {
   "name": "agentic-media-stack",
-  "version": "0.9.1",
-  "description": "Router and installer for the open-source agentic media stack: HyperFrames (HTML to MP4), video-use (agent video editing), and the ai-agents-skills creative suite. Bundles the MCP servers these workflows need. Includes Hebrew/RTL production rules, transcription-based QA for AI-generated speech video, reference-photo rules for putting real people into generated images, hosted video-generation model selection and cost discipline, and a guided beginner mode that is safe for kids.",
+  "version": "0.10.0",
+  "description": "Router and installer for the open-source agentic media stack: HyperFrames (HTML to MP4), video-use (agent video editing), and the ai-agents-skills creative suite. Bundles the MCP servers these workflows need. Includes Hebrew/RTL production rules, transcription-based QA for AI-generated speech video, reference-photo rules for putting real people into generated images, hosted video-generation model selection and cost discipline, platform re-delivery of finished footage (Reels, a 4:5 cut for LinkedIn and Facebook feeds, X) with zoomed-out framing, karaoke Hebrew captions and delivery checks, and a guided beginner mode that is safe for kids.",
   "author": {
     "name": "Leon Melamud"
   },
@@ -29,6 +29,14 @@
     "video-generation",
     "seedance",
     "flux",
-    "credits"
+    "credits",
+    "reels",
+    "instagram",
+    "linkedin",
+    "facebook",
+    "aspect-ratio",
+    "captions",
+    "karaoke",
+    "social"
   ]
 }

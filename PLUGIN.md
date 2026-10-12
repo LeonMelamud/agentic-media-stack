@@ -25,13 +25,20 @@ nothing gets put online without asking first.
 
 ## What it adds
 
-Five skills that do not exist upstream:
+Eight skills that do not exist upstream:
 
 - **`easy-media`** — guided beginner mode. Plain language, one question at a time, free-and-local defaults, and one guardrail: nothing goes online without asking first
 - **`media-stack-setup`** — installs all three ecosystems, checks prerequisites first, handles the `--full-depth` trap that silently gives you stale skills
 - **`media-pipeline`** — routing. The three ecosystems overlap superficially and are built for different jobs; choosing wrong costs a full render cycle. Includes composite multi-output pipelines, plus references for non-video websites (verified design-quality and copy skills) and RSS-triggered content automation
 - **`hebrew-media-rules`** — Hebrew and RTL production rules. No upstream repo combines transcription correction, bidi text rendering, typography, and layout mirroring in one place
 - **`generated-video-qa`** — mechanical validation for AI-generated talking-character video: transcribe every clip locally and diff against the script, dialogue-writing rules the voices can actually say, and character-consistency rules for multishot vs chained generation
+- **`reference-photo-image-rules`** — putting a real, specific person from a supplied photo into a generated image: preparing the reference so likeness and layout hold, before any credits are spent
+- **`hosted-video-generation`** — hosted video renders: choosing between Seedance, FLUX 3, Veo and Kling, one render at a time with the cost stated first, and directing motion that stays smooth
+- **`reproducible-cinematic-video`** — re-delivers finished footage without touching its timing or sound:
+  - Platform versions: a 9:16 master for Reels, Shorts, TikTok, Facebook Reels and X, plus a 4:5 cut for the LinkedIn and Facebook feeds, built from one caption file.
+  - Zoomed-out card framing instead of crop-and-upscale, with Hebrew/RTL captions burned in locally or karaoke-highlighted through HyperFrames.
+  - A recipe for steadying an opening where the camera swings between screens, and a delivery check: specs, audio sync and motion.
+  - Mode A also hybridizes an approved Three.js film with fal generations shot by shot.
 
 ## Install
 

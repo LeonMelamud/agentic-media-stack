@@ -1,0 +1,25 @@
+{
+  "project": "example",
+  "source_movie": "approved_source_movie.mp4",
+  "source_fps": 60,
+  "shots": [
+    {
+      "shot": 0,
+      "scene": "scene_name",
+      "start_frame": 0,
+      "end_frame_exclusive": 30,
+      "treatment": "native",
+      "appearance": null,
+      "preserve_typography": true
+    },
+    {
+      "shot": 1,
+      "scene": "scene_name",
+      "start_frame": 30,
+      "end_frame_exclusive": 58,
+      "treatment": "generated",
+      "appearance": "describe the physical appearance",
+      "preserve_typography": true
+    }
+  ]
+}
