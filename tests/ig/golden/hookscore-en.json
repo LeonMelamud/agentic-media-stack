@@ -1,0 +1,500 @@
+[
+  {
+    "hook": "I fixed a week-long bug in 20 minutes with one debugger trick.",
+    "checks": {
+      "LENGTH": {
+        "score": 88.0,
+        "detail": "12 words, 62 chars, ~4.4s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 75,
+        "detail": "1 concrete marker(s): 20 minutes"
+      },
+      "STAKES": {
+        "score": 20.0,
+        "detail": "0 tension marker(s) - nothing is at stake in this line"
+      },
+      "FRONTLOAD": {
+        "score": 70.0,
+        "detail": "payload at word 7, could move forward"
+      },
+      "ADDRESS": {
+        "score": 70.0,
+        "detail": "first person, no viewer named"
+      }
+    },
+    "weakest": "STAKES",
+    "flags": [],
+    "score": 46.8,
+    "verdict": "WEAK"
+  },
+  {
+    "hook": "Debugging used to take me a week. Twenty minutes now.",
+    "checks": {
+      "LENGTH": {
+        "score": 100.0,
+        "detail": "10 words, 53 chars, ~3.6s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 100.0,
+        "detail": "2 concrete marker(s): Twenty, twenty"
+      },
+      "STAKES": {
+        "score": 20.0,
+        "detail": "0 tension marker(s) - nothing is at stake in this line"
+      },
+      "FRONTLOAD": {
+        "score": 40.0,
+        "detail": "payload at word 8, too late"
+      },
+      "ADDRESS": {
+        "score": 70.0,
+        "detail": "first person, no viewer named"
+      }
+    },
+    "weakest": "STAKES",
+    "flags": [],
+    "score": 47.6,
+    "verdict": "WEAK"
+  },
+  {
+    "hook": "This is the old code. This is the new code. Same function, no shared state.",
+    "checks": {
+      "LENGTH": {
+        "score": 55,
+        "detail": "15 words, 75 chars, ~5.5s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 100.0,
+        "detail": "2 concrete marker(s): Same, This"
+      },
+      "STAKES": {
+        "score": 70.0,
+        "detail": "1 tension marker(s): no"
+      },
+      "FRONTLOAD": {
+        "score": 10.0,
+        "detail": "payload at word 13, too late; weak opener \"this is\""
+      },
+      "ADDRESS": {
+        "score": 35.0,
+        "detail": "third person, nobody in the room"
+      }
+    },
+    "weakest": "FRONTLOAD",
+    "flags": [],
+    "score": 36.4,
+    "verdict": "WEAK"
+  },
+  {
+    "hook": "Nobody tells you that most bugs live in the code you did not write.",
+    "checks": {
+      "LENGTH": {
+        "score": 66,
+        "detail": "14 words, 67 chars, ~5.1s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 15.0,
+        "detail": "0 concrete marker(s) - no number, no name, nothing checkable"
+      },
+      "STAKES": {
+        "score": 100.0,
+        "detail": "2 tension marker(s): nobody, not"
+      },
+      "FRONTLOAD": {
+        "score": 100.0,
+        "detail": "payload at word 1"
+      },
+      "ADDRESS": {
+        "score": 100.0,
+        "detail": "speaks to the viewer"
+      }
+    },
+    "weakest": "SPECIFICITY",
+    "flags": [],
+    "score": 51.7,
+    "verdict": "OK"
+  },
+  {
+    "hook": "Your logs already contain the answer, you just never read them.",
+    "checks": {
+      "LENGTH": {
+        "score": 88.0,
+        "detail": "11 words, 63 chars, ~4.0s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 15.0,
+        "detail": "0 concrete marker(s) - no number, no name, nothing checkable"
+      },
+      "STAKES": {
+        "score": 100.0,
+        "detail": "2 tension marker(s): already, never"
+      },
+      "FRONTLOAD": {
+        "score": 70.0,
+        "detail": "payload at word 3; weak opener \"yo\""
+      },
+      "ADDRESS": {
+        "score": 100.0,
+        "detail": "speaks to the viewer"
+      }
+    },
+    "weakest": "SPECIFICITY",
+    "flags": [],
+    "score": 50.8,
+    "verdict": "OK"
+  },
+  {
+    "hook": "This bug cost us 40 hours and one missing null check.",
+    "checks": {
+      "LENGTH": {
+        "score": 100.0,
+        "detail": "11 words, 53 chars, ~4.0s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 75,
+        "detail": "1 concrete marker(s): 40 hours"
+      },
+      "STAKES": {
+        "score": 70.0,
+        "detail": "1 tension marker(s): cost"
+      },
+      "FRONTLOAD": {
+        "score": 100.0,
+        "detail": "payload at word 3"
+      },
+      "ADDRESS": {
+        "score": 35.0,
+        "detail": "third person, nobody in the room"
+      }
+    },
+    "weakest": "ADDRESS",
+    "flags": [],
+    "score": 59.6,
+    "verdict": "OK"
+  },
+  {
+    "hook": "Watch: a week-long bug, found in 20 minutes, without a repro.",
+    "checks": {
+      "LENGTH": {
+        "score": 88.0,
+        "detail": "11 words, 61 chars, ~4.0s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 75,
+        "detail": "1 concrete marker(s): 20 minutes"
+      },
+      "STAKES": {
+        "score": 70.0,
+        "detail": "1 tension marker(s): without"
+      },
+      "FRONTLOAD": {
+        "score": 70.0,
+        "detail": "payload at word 7, could move forward"
+      },
+      "ADDRESS": {
+        "score": 90.0,
+        "detail": "imperative opener (\"watch\")"
+      }
+    },
+    "weakest": "STAKES",
+    "flags": [],
+    "score": 75.2,
+    "verdict": "STRONG"
+  },
+  {
+    "hook": "20 minutes, no repro. That's how the bug got fixed.",
+    "checks": {
+      "LENGTH": {
+        "score": 100.0,
+        "detail": "10 words, 51 chars, ~3.6s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 100.0,
+        "detail": "2 concrete marker(s): 20 minutes, That"
+      },
+      "STAKES": {
+        "score": 70.0,
+        "detail": "1 tension marker(s): no"
+      },
+      "FRONTLOAD": {
+        "score": 100.0,
+        "detail": "payload at word 1"
+      },
+      "ADDRESS": {
+        "score": 35.0,
+        "detail": "third person, nobody in the room"
+      }
+    },
+    "weakest": "ADDRESS",
+    "flags": [],
+    "score": 62.6,
+    "verdict": "OK"
+  },
+  {
+    "hook": "Your service could be next: this bug hid for a week.",
+    "checks": {
+      "LENGTH": {
+        "score": 100.0,
+        "detail": "11 words, 52 chars, ~4.0s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 15.0,
+        "detail": "0 concrete marker(s) - no number, no name, nothing checkable"
+      },
+      "STAKES": {
+        "score": 20.0,
+        "detail": "0 tension marker(s) - nothing is at stake in this line"
+      },
+      "FRONTLOAD": {
+        "score": 0.0,
+        "detail": "no payload word anywhere in the line; weak opener \"yo\""
+      },
+      "ADDRESS": {
+        "score": 100.0,
+        "detail": "speaks to the viewer"
+      }
+    },
+    "weakest": "FRONTLOAD",
+    "flags": [],
+    "score": 28.2,
+    "verdict": "WEAK"
+  },
+  {
+    "hook": "Watch this bug get fixed in 20 minutes, without a repro.",
+    "checks": {
+      "LENGTH": {
+        "score": 100.0,
+        "detail": "11 words, 56 chars, ~4.0s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 75,
+        "detail": "1 concrete marker(s): 20 minutes"
+      },
+      "STAKES": {
+        "score": 70.0,
+        "detail": "1 tension marker(s): without"
+      },
+      "FRONTLOAD": {
+        "score": 70.0,
+        "detail": "payload at word 7, could move forward"
+      },
+      "ADDRESS": {
+        "score": 90.0,
+        "detail": "imperative opener (\"watch\")"
+      }
+    },
+    "weakest": "STAKES",
+    "flags": [],
+    "score": 76.6,
+    "verdict": "STRONG"
+  },
+  {
+    "hook": "No repro. 20 minutes. A fixed production bug.",
+    "checks": {
+      "LENGTH": {
+        "score": 100.0,
+        "detail": "8 words, 45 chars, ~2.9s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 75,
+        "detail": "1 concrete marker(s): 20 minutes"
+      },
+      "STAKES": {
+        "score": 70.0,
+        "detail": "1 tension marker(s): no"
+      },
+      "FRONTLOAD": {
+        "score": 100.0,
+        "detail": "payload at word 1"
+      },
+      "ADDRESS": {
+        "score": 35.0,
+        "detail": "third person, nobody in the room"
+      }
+    },
+    "weakest": "ADDRESS",
+    "flags": [],
+    "score": 59.6,
+    "verdict": "OK"
+  },
+  {
+    "hook": "Stop trusting green tests. A week-long bug passed all of them.",
+    "checks": {
+      "LENGTH": {
+        "score": 88.0,
+        "detail": "11 words, 62 chars, ~4.0s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 15.0,
+        "detail": "0 concrete marker(s) - no number, no name, nothing checkable"
+      },
+      "STAKES": {
+        "score": 70.0,
+        "detail": "1 tension marker(s): stop"
+      },
+      "FRONTLOAD": {
+        "score": 100.0,
+        "detail": "payload at word 1"
+      },
+      "ADDRESS": {
+        "score": 90.0,
+        "detail": "imperative opener (\"stop\")"
+      }
+    },
+    "weakest": "SPECIFICITY",
+    "flags": [],
+    "score": 49.6,
+    "verdict": "WEAK"
+  },
+  {
+    "hook": "Think your tests are enough because they pass?",
+    "checks": {
+      "LENGTH": {
+        "score": 100.0,
+        "detail": "8 words, 46 chars, ~2.9s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 15.0,
+        "detail": "0 concrete marker(s) - no number, no name, nothing checkable"
+      },
+      "STAKES": {
+        "score": 20.0,
+        "detail": "0 tension marker(s) - nothing is at stake in this line"
+      },
+      "FRONTLOAD": {
+        "score": 30.0,
+        "detail": "no payload word anywhere in the line"
+      },
+      "ADDRESS": {
+        "score": 100.0,
+        "detail": "speaks to the viewer"
+      }
+    },
+    "weakest": "SPECIFICITY",
+    "flags": [],
+    "score": 37.8,
+    "verdict": "WEAK"
+  },
+  {
+    "hook": "Hey guys, today I wanted to talk about content strategy",
+    "checks": {
+      "LENGTH": {
+        "score": 100.0,
+        "detail": "10 words, 55 chars, ~3.6s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 15.0,
+        "detail": "0 concrete marker(s) - no number, no name, nothing checkable"
+      },
+      "STAKES": {
+        "score": 20.0,
+        "detail": "0 tension marker(s) - nothing is at stake in this line"
+      },
+      "FRONTLOAD": {
+        "score": 0.0,
+        "detail": "no payload word anywhere in the line; weak opener \"hey\""
+      },
+      "ADDRESS": {
+        "score": 70.0,
+        "detail": "first person, no viewer named"
+      }
+    },
+    "weakest": "FRONTLOAD",
+    "flags": [
+      "Greeting. Nobody came to the feed to be greeted."
+    ],
+    "score": 9.6,
+    "verdict": "WEAK"
+  },
+  {
+    "hook": "Stop scrolling if you want to grow on Instagram in 2026 🔥",
+    "checks": {
+      "LENGTH": {
+        "score": 100.0,
+        "detail": "11 words, 57 chars, ~4.0s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 100.0,
+        "detail": "2 concrete marker(s): 2026, Instagram"
+      },
+      "STAKES": {
+        "score": 70.0,
+        "detail": "1 tension marker(s): stop"
+      },
+      "FRONTLOAD": {
+        "score": 100.0,
+        "detail": "payload at word 1"
+      },
+      "ADDRESS": {
+        "score": 100.0,
+        "detail": "speaks to the viewer"
+      }
+    },
+    "weakest": "STAKES",
+    "flags": [
+      "Opens with \"stop scrolling\". Asking for attention proves you have not earned it.",
+      "Emoji in the hook. On-screen text at hook size has room for words or for an emoji, not both."
+    ],
+    "score": 54.4,
+    "verdict": "OK"
+  },
+  {
+    "hook": "I lost $18,000 because of one missing contract.",
+    "checks": {
+      "LENGTH": {
+        "score": 100.0,
+        "detail": "8 words, 47 chars, ~2.9s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 75,
+        "detail": "1 concrete marker(s): $18,000"
+      },
+      "STAKES": {
+        "score": 100.0,
+        "detail": "2 tension marker(s): lost, a price"
+      },
+      "FRONTLOAD": {
+        "score": 100.0,
+        "detail": "payload at word 2"
+      },
+      "ADDRESS": {
+        "score": 70.0,
+        "detail": "first person, no viewer named"
+      }
+    },
+    "weakest": "ADDRESS",
+    "flags": [],
+    "score": 81.4,
+    "verdict": "STRONG"
+  },
+  {
+    "hook": "Nobody tells you that your first 30 reels are supposed to flop.",
+    "checks": {
+      "LENGTH": {
+        "score": 88.0,
+        "detail": "12 words, 63 chars, ~4.4s spoken (want 5-12 words)"
+      },
+      "SPECIFICITY": {
+        "score": 75,
+        "detail": "1 concrete marker(s): 30"
+      },
+      "STAKES": {
+        "score": 100.0,
+        "detail": "2 tension marker(s): first, nobody"
+      },
+      "FRONTLOAD": {
+        "score": 100.0,
+        "detail": "payload at word 1"
+      },
+      "ADDRESS": {
+        "score": 100.0,
+        "detail": "speaks to the viewer"
+      }
+    },
+    "weakest": "SPECIFICITY",
+    "flags": [],
+    "score": 85.6,
+    "verdict": "STRONG"
+  }
+]

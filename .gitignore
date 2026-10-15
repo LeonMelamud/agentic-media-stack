@@ -8,3 +8,4 @@ glossary-and-harness.md
 unusual-automation.md
 agentic-media-stack.plugin
 .claude/
+__pycache__/

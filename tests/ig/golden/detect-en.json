@@ -1,0 +1,27 @@
+{
+  "source": "/Users/leon.melamud/Downloads/Projects/files-video-and-efficincy-plugin/tests/ig/fixtures/draft-en.txt",
+  "checks": {
+    "BURSTINESS": {
+      "score": 59.6,
+      "detail": "variation 0.51 across 5 sentences (want 0.55+)"
+    },
+    "SPECIFICITY": {
+      "score": 100.0,
+      "detail": "3 concrete markers, 6.1 per 100 words (want 4+)"
+    },
+    "SLOP DENSITY": {
+      "score": 0.0,
+      "detail": "8 stock terms, 16.3 per 100 words (crucial, delve, delve into, follow for more, ...)"
+    },
+    "FINGERPRINT": {
+      "score": 0.0,
+      "detail": "0 invisible, 1 em dash, 1 curly quote, 1 ellipsis, 0 hard space"
+    },
+    "VOICE": {
+      "score": 67.2,
+      "detail": "8.2 contractions, 4.1 personal pronouns per 100 words, 2 structural tell(s) [not-just, follow-bait]"
+    }
+  },
+  "human_score": 27.2,
+  "verdict": "FLAGGED"
+}

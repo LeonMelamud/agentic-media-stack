@@ -58,6 +58,11 @@ shots, dead air gets filled with invented gibberish speech. The
 | `reference-photo-image-rules` | Putting a real person from a photo into a generated image without likeness or layout drift |
 | `hosted-video-generation` | Hosted video models: which model, cost discipline, smooth motion |
 | `reproducible-cinematic-video` | Finished footage into platform versions (Reels, 4:5 for LinkedIn/Facebook, X): zoom-out framing, karaoke Hebrew captions, hook and closing line, a steady opening, delivery checks |
+| `ig-reel` | Reel script from an idea: 26 hook formulas, a hook score and a timed beat sheet. Adapted, reads Hebrew |
+| `ig-caption` | Instagram caption linted against the ~125-character feed cut, the 5-hashtag cap and one ask. Adapted, reads Hebrew |
+| `ig-human` | Strips em dashes, invisible characters and stock phrasing, then scores the draft. Adapted, keeps Hebrew direction marks |
+| `ig-carousel` | Carousel copy slide by slide, then the 1080x1350 files. Adapted, Hebrew-aware |
+| `ig-repurpose` | One article, video or podcast into a week of Reels and carousels. Adapted, routes cutting to this stack |
 
 ## What it routes to
 
@@ -71,9 +76,13 @@ Plus bundled MCP servers (image/video/voice/music generation, browser control,
 scraping, deploys) — see [`PLUGIN.md`](PLUGIN.md) for the
 full documentation, prerequisites, and design notes.
 
-**This plugin holds no copies of upstream skills.** It installs them from source;
-upstream stays the source of truth.
+**This plugin holds no copies of upstream skills**, with one stated exception: the five
+`ig-*` skills are adapted from Jake Schincariol's MIT
+[instagram-agent-skill](https://github.com/Jakeschincariol/instagram-agent-skill) so they
+work in Hebrew. What changed and the licence: [THIRD-PARTY.md](THIRD-PARTY.md).
+Everything else installs from source; upstream stays the source of truth.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE). The adapted `ig-*` skills keep their own MIT notice in
+[THIRD-PARTY.md](THIRD-PARTY.md).

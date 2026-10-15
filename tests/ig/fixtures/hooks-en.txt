@@ -1,0 +1,17 @@
+I fixed a week-long bug in 20 minutes with one debugger trick.
+Debugging used to take me a week. Twenty minutes now.
+This is the old code. This is the new code. Same function, no shared state.
+Nobody tells you that most bugs live in the code you did not write.
+Your logs already contain the answer, you just never read them.
+This bug cost us 40 hours and one missing null check.
+Watch: a week-long bug, found in 20 minutes, without a repro.
+20 minutes, no repro. That's how the bug got fixed.
+Your service could be next: this bug hid for a week.
+Watch this bug get fixed in 20 minutes, without a repro.
+No repro. 20 minutes. A fixed production bug.
+Stop trusting green tests. A week-long bug passed all of them.
+Think your tests are enough because they pass?
+Hey guys, today I wanted to talk about content strategy
+Stop scrolling if you want to grow on Instagram in 2026 🔥
+I lost $18,000 because of one missing contract.
+Nobody tells you that your first 30 reels are supposed to flop.

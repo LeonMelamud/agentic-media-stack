@@ -2,7 +2,7 @@
 
 A router and installer for the open-source agentic media stack. Generate video, landing pages, decks, and motion graphics from a coding agent.
 
-**This plugin holds no copies of upstream skills.** It installs them from source and teaches the agent which to use when. Upstream stays the source of truth — when HeyGen or Browser Use or the ai-agents-skills suite ships an update, you get it with a `git pull`, not a plugin release.
+**This plugin holds no copies of upstream skills**, except five Instagram skills adapted for Hebrew (below and in [THIRD-PARTY.md](THIRD-PARTY.md)). Everything else it installs from source, and it teaches the agent which to use when. Upstream stays the source of truth — when HeyGen or Browser Use or the ai-agents-skills suite ships an update, you get it with a `git pull`, not a plugin release.
 
 ## New to this? Start here
 
@@ -39,6 +39,19 @@ Eight skills that do not exist upstream:
   - Zoomed-out card framing instead of crop-and-upscale, with Hebrew/RTL captions burned in locally or karaoke-highlighted through HyperFrames.
   - A recipe for steadying an opening where the camera swings between screens, and a delivery check: specs, audio sync and motion.
   - Mode A also hybridizes an approved Three.js film with fal generations shot by shot.
+
+Five skills adapted from upstream, because the originals could not read Hebrew:
+
+- **`ig-reel`**, **`ig-caption`**, **`ig-human`** — from Jake Schincariol's MIT
+  [instagram-agent-skill](https://github.com/Jakeschincariol/instagram-agent-skill): a Reel script
+  with a scored hook and a timed beat sheet, a caption linter for the feed cut, the
+  5-hashtag cap and one ask, and a humanizer. Here their tools count Hebrew words,
+  hashtags and asks, time Hebrew speech, and keep Hebrew direction marks. English output
+  is unchanged and tested (`tests/ig/`). The other eight skills of that pack stay in its own
+  `instagram-agent` plugin.
+- **`ig-carousel`**, **`ig-repurpose`** — from the same pack: carousel copy and the
+  1080x1350 files, and one long asset into a week of Reels and carousels. Here they
+  point at `hebrew-media-rules` and route the cutting to `media-pipeline`.
 
 ## Install
 
@@ -101,7 +114,7 @@ Package names and endpoints change. If a server fails to start, check the vendor
 
 ## What this plugin does not do
 
-- It does not vendor upstream skills. Updates come from upstream
+- It does not vendor upstream skills, apart from the five adapted `ig-*` skills. Updates come from upstream; for those five, diff upstream by hand (`THIRD-PARTY.md`)
 - It does not cover the non-skill tools in this space — Bambu Studio, Blender, and Meshy are desktop applications or hosted services, not agent skills. `references/pipelines.md` documents how they fit into a physical-product pipeline, but you drive them yourself
 - It does not include API keys or accounts
 
@@ -119,6 +132,7 @@ This plugin is a router. The work belongs to:
 - **HyperFrames** — HeyGen, Apache 2.0
 - **video-use** — Browser Use, MIT
 - **ai-agents-skills** — Yuval Avidani, MIT
+- **instagram-agent-skill** — Jake Schincariol, MIT (five skills adapted, see `THIRD-PARTY.md`)
 
 Install them directly if you would rather skip the routing layer.
 
